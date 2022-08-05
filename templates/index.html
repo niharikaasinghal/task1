@@ -1,0 +1,11 @@
+{% if obj %}
+          <h1>Welcome, {{obj.username}}</h1>
+          <h3>Your details are-<br></h3>
+          
+          <h3>{{obj.firstname}} {{obj.lastname}}</h3>
+          <h3>{{obj.email}}</h3>
+          <h3>{{obj.address}}</h3>
+          {% else %}
+          <h2>click <a href="login">here</a> to login</h2>
+          <h2>click <a href="register">here</a> to register</h2>
+          {% endif %}

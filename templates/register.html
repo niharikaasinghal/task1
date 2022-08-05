@@ -1,0 +1,28 @@
+<h1>Sign up below:</h1>
+
+<style>
+    h5{
+        color : red;
+    }
+</style>
+
+{%for message in messages %}
+<h5>{{message}}</h5>
+{% endfor %}
+
+<form method="POST" action="register" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset>
+        First Name:  <input type="text" name="fname" /><br><br>
+        Last Name:  <input type="text" name="lname" /><br><br>
+        Profile pic:  <input type="File" accept="image/*" name="pp" /><br><br>
+        Username:  <input type="text" name="username" /><br><br>
+        Email: <input type="email" name="email" /><br><br>
+        Password:  <input type="password" name="pass1" /><br><br>
+        Confirm Password:  <input type="password" name="pass2" /><br><br>
+        Address:  <input type="text" name="address" /><br><br>
+        <input type="submit" />
+    </fieldset>
+</form>
+
+<p>Already having an account? Click <a href='login'>here</a> to login</p>
